@@ -1,5 +1,75 @@
+$c-white: #fff;
+$c-yellow: #F7DF1E;
+$c-blue: #2121AA;
+$c-darkblue : #030333;
+$c-grey-1: #ccc;
+$c-grey-2: #999;
+$c-grey-3: #333;
+$c-grey-4: #222;
+$c-black: #000;
+
+$fw-bold: 700;
+$fw-normal: 400;
+$fw-light: 300;
+
+$fz-giant: 96px;
+$fz-big: 36px;
+$fz-medium: 24px;
+$fz-avg: 18px;
+$fz-small: 14px;
+
+
+@mixin white-shadow {
+    box-shadow: -5px 5px 5px rgba(255, 255, 255, 0.25);
+}
+
+@mixin black-shadow {
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+@mixin rounded {
+    border-radius: 10px;
+}
+
+@mixin hover-yellow {
+    &:hover {
+        color: $c-yellow;
+    }
+}
+
+
+
 body {
     font-size: 18px;
-    background-color: #222;
-    color: #fff;
+    font-family: "Roboto", sans-serif;
+    background-color: $c-grey-4;
+    color: $c-white;
+}
+
+.header, .nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    flex-direction: column;
+
+    background: url("../images/header_background.png") center no-repeat fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.nav {
+    height: 100px;
+    align-items: center;
+
+    &__logo {
+        font-weight: $fw-bold;
+    }
+    
+    &-links {    
+        
+    }
+    
 }
