@@ -1,4 +1,6 @@
 $c-white: #fff;
+$c-black: #000;
+
 $c-yellow: #F7DF1E;
 $c-blue: #2121AA;
 $c-darkblue : #030333;
@@ -6,7 +8,6 @@ $c-grey-1: #ccc;
 $c-grey-2: #999;
 $c-grey-3: #333;
 $c-grey-4: #222;
-$c-black: #000;
 
 $fw-bold: 700;
 $fw-normal: 400;
@@ -32,6 +33,7 @@ $fz-small: 14px;
 }
 
 @mixin hover-yellow {
+    transition: .4s;
     &:hover {
         color: $c-yellow;
     }
@@ -40,36 +42,53 @@ $fz-small: 14px;
 
 
 body {
-    font-size: 18px;
+    font-size: $fz-avg;
     font-family: "Roboto", sans-serif;
     background-color: $c-grey-4;
     color: $c-white;
 }
 
-.header, .nav {
-    display: flex;
-    justify-content: space-between;
-}
-
 .header {
-    flex-direction: column;
-
-    background: url("../images/header_background.png") center no-repeat fixed;
-    background-size: cover;
+    background: url("../images/header/header-bg.png") center / cover no-repeat;
     width: 100%;
     height: 100vh;
+
+    .navbar {
+        display: flex;
+        align-items: center;
+
+        .navbar-nav {
+            align-items: center;
+
+            .nav-item {
+                margin: 0 15px;
+                font-size: $fz-medium;
+
+                .nav-link {
+                    color: $c-white;
+
+                    &:hover {
+                        @include hover-yellow();
+                        }
+                    }
+                }
+        }   
+    }
 }
 
-.nav {
-    height: 100px;
-    align-items: center;
+.btn, .btn-small {
+    padding: 10px 15px;
+    font-size: $fz-avg;
+    font-weight: $fw-bold;
+    color: $c-blue;
+    background-color: $c-white;
+    border: 2px solid $c-blue;
+    border-radius: 5px;;
 
-    &__logo {
-        font-weight: $fw-bold;
+    transition: .4s;
+
+    &:hover {
+        color: $c-white;
+        background-color: $c-blue;
     }
-    
-    &-links {    
-        
-    }
-    
 }

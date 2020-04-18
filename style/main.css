@@ -5,34 +5,59 @@ body {
   color: #fff;
 }
 
-.header, .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .header {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: url("../images/header_background.png") center no-repeat fixed;
-  background-size: cover;
+  background: url("../images/header/header-bg.png") center/cover no-repeat;
   width: 100%;
   height: 100vh;
 }
 
-.nav {
-  height: 100px;
+.header .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.nav__logo {
+.header .navbar .navbar-nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .navbar .navbar-nav .nav-item {
+  margin: 0 15px;
+  font-size: 24px;
+}
+
+.header .navbar .navbar-nav .nav-item .nav-link {
+  color: #fff;
+}
+
+.header .navbar .navbar-nav .nav-item .nav-link:hover {
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.header .navbar .navbar-nav .nav-item .nav-link:hover:hover {
+  color: #F7DF1E;
+}
+
+.btn, .btn-small {
+  padding: 10px 15px;
+  font-size: 18px;
   font-weight: 700;
+  color: #2121AA;
+  background-color: #fff;
+  border: 2px solid #2121AA;
+  border-radius: 5px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.btn:hover, .btn-small:hover {
+  color: #fff;
+  background-color: #2121AA;
 }
 /*# sourceMappingURL=main.css.map */
