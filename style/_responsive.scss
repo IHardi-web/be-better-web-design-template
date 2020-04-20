@@ -1,0 +1,53 @@
+@media screen and (max-width: 992px) {
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    .header {
+        .header-content {
+            h1 {
+                font-size: 78px;
+            }
+        }
+    }
+
+
+}
+
+
+@media screen and (max-width: 576px) {
+    .header {
+        .header-content {
+            h1 {
+                font-size: 56px;
+            }
+
+            h2 {
+                font-size: $fz-medium;
+            }
+
+            h4 {
+                font-size: $fz-avg;
+            }
+        }
+    }
+
+    .section {
+        .section-title {
+            h2 {
+                font-size: 78px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+        .header-content {
+            h1 {
+                font-size: 45px;
+            }
+        }
+    }
+}

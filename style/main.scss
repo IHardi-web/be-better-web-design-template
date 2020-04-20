@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@300;400;700&display=swap');
+
+$ff-roboto: 'Roboto', sans-serif;
+$ff-roboto-mono: 'Roboto Mono', monospace;
+
 $c-white: #fff;
 $c-black: #000;
 
@@ -43,15 +48,23 @@ $fz-small: 14px;
 
 body {
     font-size: $fz-avg;
-    font-family: "Roboto", sans-serif;
+    font-family: $ff-roboto;
     background-color: $c-grey-4;
     color: $c-white;
+    scroll-behavior: smooth;
 }
 
 .header {
     background: url("../images/header/header-bg.png") center / cover no-repeat;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+
+    .header-wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
     .navbar {
         display: flex;
@@ -74,6 +87,42 @@ body {
                 }
         }   
     }
+
+    .header-content {
+        text-shadow: -3px 4px 10px rgba(255, 255, 255, 0.15);
+
+        h1 {
+            text-transform: uppercase;
+            font-weight: $fw-bold;
+            font-size: $fz-giant;
+            letter-spacing: 6px;
+            line-height: 1;
+
+            span {
+                color: $c-yellow;
+            }
+        }
+
+        .mono {
+            font-family: $ff-roboto-mono;
+        }
+
+        h2 {
+            font-weight: $fw-bold;
+            font-size: $fz-big;
+            letter-spacing: 2px;
+        }
+
+        h4 {
+            font-weight: $fw-normal;
+            font-size: $fz-medium;
+        }
+    }
+
+    .learn-more {
+        display: inline-block;
+        margin: 0 auto 20px;
+    }
 }
 
 .btn, .btn-small {
@@ -92,3 +141,90 @@ body {
         background-color: $c-blue;
     }
 }
+
+.section {
+    padding: 150px 0;
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 100px;
+        h2 {
+            font-size: $fz-giant;
+            font-weight: $fw-bold;
+            position: relative;
+
+            &:after {
+                content: "";
+                display: block;
+                width: 170px;
+                height: 8px;
+                background: $c-yellow;
+
+                position: absolute;
+                bottom: -40px;
+                text-align: center;
+                left: 50%;
+                margin-left: -85px;
+            }
+        }
+    }
+}
+
+.about-text {
+    font-weight: $fw-light;
+    font-size: $fz-medium;
+    color: $c-grey-1;
+    line-height: 1.2;
+}
+
+
+.section-blue {
+    min-height: 200px;
+    background: $c-blue;
+    text-align: center;
+
+    .stats-wrapper {
+        display: flex;
+        justify-content: space-between;
+        min-height: 200px;
+        align-items: center;
+    }
+
+    .stat-item {
+        color: $c-white;
+        padding: 25px;
+
+        .stat-number {
+            font-size: 72px;
+            font-weight: $fw-bold;
+        }
+
+        .stat-desc {
+            font-size: $fz-medium;
+            font-weight: $fw-bold;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "_responsive";
